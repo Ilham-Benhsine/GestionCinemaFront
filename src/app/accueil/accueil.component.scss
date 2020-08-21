@@ -11,16 +11,21 @@ body {
 }
 
 h1 {
-  font-family: Arial;
+  font-family: fantasy;
+  font-size: 400%;
+  padding-top: 1em;
   color: red;
   text-align: center;
 }
-
+.page{
+    background-color: royalblue;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3,100%);
   overflow:hidden;
   scroll-behavior: smooth;
+ 
 
   section {
     width: 100%;
@@ -29,13 +34,16 @@ h1 {
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
     
+    .arrow__btn{
+        
+    }
     .item {
       padding: 0 2px;
       transition: $duration all;
       
       &:hover { 
         margin: 0 40px;
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
       
     }
@@ -62,7 +70,7 @@ h1 {
       
     }
     
-  }
+    }
 }
 
 // Remove the arrow for Mobile
