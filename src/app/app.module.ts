@@ -1,3 +1,4 @@
+import { FilmWebService } from './shared/webService/film.webservice';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -15,6 +16,7 @@ import { CinemaComponent } from './cinema/cinema.component';
 import { FilmCardComponent } from './shared/component/film-card/film-card.component';
 import { CinemaCardComponent } from './shared/component/cinema-card/cinema-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatCardModule,
     MatToolbarModule,
@@ -36,7 +39,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    FilmWebService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
