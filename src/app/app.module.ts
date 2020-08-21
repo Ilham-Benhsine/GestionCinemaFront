@@ -16,6 +16,7 @@ import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,10 +36,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    FilmWebService
+    FilmWebService,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,4 @@
+import { FilmComponent } from './../film/film.component';
 import { FilmCardComponent } from './component/film-card/film-card.component';
 import { CinemaCardComponent } from './component/cinema-card/cinema-card.component';
 import { CommonModule } from '@angular/common';
