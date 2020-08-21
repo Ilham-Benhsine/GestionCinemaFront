@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'accueil' },
   {path: 'accueil', component: AccueilComponent},
   {path: 'film', component: FilmComponent},
   {path: 'cinema', component: CinemaComponent}

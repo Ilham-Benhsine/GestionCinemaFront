@@ -15,6 +15,7 @@ import { CinemaComponent } from './cinema/cinema.component';
 import { FilmCardComponent } from './shared/component/film-card/film-card.component';
 import { CinemaCardComponent } from './shared/component/cinema-card/cinema-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FilmCardComponent,
     CinemaCardComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -34,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
