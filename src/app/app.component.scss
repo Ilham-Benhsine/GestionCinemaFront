@@ -1,0 +1,12 @@
+.app-mat-toolbar {
+    margin: 0;
+}
+
+.app-mat-toolbar .app-mat-toolbar-row div a {
+    font-size: 1.3em;
+}
+
+.app-mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+}
