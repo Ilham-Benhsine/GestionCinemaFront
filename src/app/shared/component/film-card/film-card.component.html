@@ -1,2 +1,9 @@
-<p>film-card works!</p>
-<p>{{film.titre}}</p>
+<mat-card class="app-mat-card">
+    <img class="app-img" src="../../../../assets/image/{{film.urlImg}}" alt="Photo of a Shiba Inu">
+    <mat-card-content class="app-mat-card-content">
+        <mat-card-title>{{film.titre}}</mat-card-title>
+        <p>
+            {{film.description}}
+        </p>
+    </mat-card-content>
+</mat-card>
