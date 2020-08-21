@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { FilmWebService } from './../shared/webService/film.webservice';
 import { Component, OnInit } from '@angular/core';
 

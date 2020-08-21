@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,8 +14,6 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
-import { FilmCardComponent } from './shared/component/film-card/film-card.component';
-import { CinemaCardComponent } from './shared/component/cinema-card/cinema-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,9 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AccueilComponent,
     FilmComponent,
-    CinemaComponent,
-    FilmCardComponent,
-    CinemaCardComponent
+    CinemaComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    SharedModule
   ],
   providers: [
     FilmWebService
