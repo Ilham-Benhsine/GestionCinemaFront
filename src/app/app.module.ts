@@ -16,7 +16,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -43,7 +43,7 @@ import { CommonModule } from '@angular/common';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-
+    MatFormFieldModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
