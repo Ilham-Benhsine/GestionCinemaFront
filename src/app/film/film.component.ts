@@ -1,4 +1,4 @@
-import { SharedModule } from './../shared/shared.module';
+//import { SharedModule } from './../shared/shared.module';
 import { FilmWebService } from './../shared/webService/film.webservice';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,11 +16,11 @@ export class FilmComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getUser();
+    this.getFilms();
   }
 
-  getUser(): void {
-    this.filmWebService.getFilms().subscribe(
+  getFilms(): void {
+    this.filmWebService.getFilmsBack().subscribe(
       (data) => {
         console.log('TestWebServiceFilm', data);
         this.filmList = data;

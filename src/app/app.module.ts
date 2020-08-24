@@ -1,3 +1,4 @@
+import { CinemaWebService } from './shared/webService/cinema.webservice';
 import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
 import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
@@ -52,11 +53,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     FilmWebService,
-
-    MatAutocompleteModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    FormsModule
+    CinemaWebService
   ],
   bootstrap: [AppComponent]
 })

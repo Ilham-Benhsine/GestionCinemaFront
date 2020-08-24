@@ -1,12 +1,12 @@
 <mat-card class="app-cinema-card">
     <mat-card-header>
       <!--<div mat-card-avatar class="example-header-image"></div>-->
-      <mat-card-title> {{ cinema }} </mat-card-title>
-      <mat-card-subtitle>  adresse  </mat-card-subtitle>
+      <mat-card-title>{{cinema.nom}}</mat-card-title>
+      <mat-card-subtitle> {{ cinema.adresse }} </mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="../../../../assets/image/cinema.jpg" alt="Photo générique cinéma">
     <mat-card-content>
-    Nombres de salles :
+    Nombres de salles : {{ cinema.nombreSalles }}  
     </mat-card-content>
     <mat-card-actions>
       <button mat-button color="primary">Voir séances</button>

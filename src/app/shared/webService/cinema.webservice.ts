@@ -4,17 +4,18 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { catchError, map } from 'rxjs/operators';
 import { throwError, Observable } from 'rxjs';
+import { Cinema } from '../beans/Cinema';
 
 @Injectable({
     providedIn: 'root'
 })
-export class FilmWebService {
+export class CinemaWebService {
 
     baseUrl = 'http://localhost:8080/';
 
     constructor(private http: HttpClient) { }
 
-    getFilmsBack(): Observable<Film[]> {
-        return this.http.get<Film[]>(this.baseUrl + 'film/');
+    getCinemasBack(): Observable<Cinema[]> {
+        return this.http.get<Cinema[]>(this.baseUrl + 'cinema/');
     }
 }

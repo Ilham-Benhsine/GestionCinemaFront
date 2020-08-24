@@ -1,3 +1,4 @@
+import { CinemaWebService } from './../shared/webService/cinema.webservice';
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
@@ -17,7 +18,15 @@ export class CinemaComponent implements OnInit {
   'Pathé Docks 76 - Rouen'];
   filteredOptions: Observable<string[]>;
 
-  ngOnInit() {
+  cinemaList: any[];
+  cinemaChoisis: any;
+
+  constructor(
+    private cinemaWebService: CinemaWebService
+  ) { }
+
+  ngOnInit(): void {
+    this.getCinemas();
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -29,6 +38,15 @@ export class CinemaComponent implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  getCinemas(): void {
+    this.cinemaWebService.getCinemasBack().subscribe(
+      (data) => {
+        console.log('TestWebServiceCinema', data);
+        this.cinemaList = data;
+      }
+    );
   }
   
 }
