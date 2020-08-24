@@ -1,6 +1,6 @@
 import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -47,7 +47,8 @@ import { CommonModule } from '@angular/common';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    MatAutocompleteModule
   ],
   providers: [
     FilmWebService,
