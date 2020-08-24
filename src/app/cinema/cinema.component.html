@@ -3,28 +3,28 @@
     <div class="margeTop"></div>
     <div class="margeBottom"></div>
     <div class="margeRight"></div>
-    <div class="margeLeft"></div>
+    <div class="margeLeft"></div>    
+
 
     <form class="barre-recherche-cinema">
-        <mat-form-field class="barre-recherche-cinema-mat">
-          <input type="text"
-                 class="texte-recherche-cinema"
-                 placeholder="Rechercher un cinéma..."
-                 aria-label="Cinéma"
-                 matInput
-                 [formControl]="myControl"
-                 [matAutocomplete]="auto">
-
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
+      <mat-form-field class="barre-recherche-cinema-mat">
+        <input type="text"
+               class="texte-recherche-cinema"
+               placeholder="Rechercher un cinéma..."
+               aria-label="Cinéma"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
     </form>
       
     <div class="liste-cards-cinema">
-        <app-cinema-card class="card-cinema" [cinema]="cinema" *ngFor="let cinema of listeCinema"></app-cinema-card>
+        <app-cinema-card class="card-cinema" [cinema]="cinema" *ngFor="let cinema of options"></app-cinema-card>
     </div>
       
      

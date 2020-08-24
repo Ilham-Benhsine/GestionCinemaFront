@@ -17,9 +17,7 @@ export class CinemaComponent implements OnInit {
   'Pathé Docks 76 - Rouen'];
   filteredOptions: Observable<string[]>;
 
-  listeCinema: string[] = ['cinemaA', 'cinemaB', 'cinemaC'];
-  
-  ngOnInit(): void {
+  ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -33,4 +31,9 @@ export class CinemaComponent implements OnInit {
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
+
+  /*ngOnInit() {
+  }*/
+
+  
 }
