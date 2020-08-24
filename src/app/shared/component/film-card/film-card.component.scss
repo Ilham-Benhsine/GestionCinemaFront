@@ -1,12 +1,38 @@
+.app-div-card {
+   display: flex;
+   justify-content: center;
+}
+
 .app-mat-card {
+    width: 80%;
     display: flex;
 }
 
-.app-mat-card-content {
-    margin: 0;
-    padding: 1.3em;
+.app-p-img{
+    width: 25%;
+    flex-shrink: 0;
 }
 
 .app-img{
-    width: 25%;
+    width: 100%;
+}
+
+.app-mat-card-content {
+    padding: 1.3em;
+}
+
+.app-mat-card-title {
+    margin-bottom: 0.7em;;
+}
+
+.app-p-description {
+    text-align: justify;
+}
+
+.app-span-dateSortie {
+    margin-right: 15%;
+}
+
+.app-span {
+    font-weight: bolder;
 }
