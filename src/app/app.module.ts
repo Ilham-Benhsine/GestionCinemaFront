@@ -15,8 +15,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FilmComponent,
     CinemaComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,10 +42,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [
     FilmWebService,
+
   ],
   bootstrap: [AppComponent]
 })
