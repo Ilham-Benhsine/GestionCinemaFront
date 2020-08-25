@@ -13,7 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 
@@ -33,6 +33,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ProflComponent } from './profl/profl.component';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
+import { DialogDataExampleComponent } from './shared/component/dialog-data-example/dialog-data-example.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
     InscriptionComponent,
     ConnexionComponent,
     ProflComponent,
-    DeconnexionComponent
+    DeconnexionComponent,
+    DialogDataExampleComponent
   ],
 
   imports: [
@@ -72,12 +75,14 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [
     FilmWebService,
     CinemaWebService,
     UtilisateurWebService,
-    UtilisateurObservableService
+    UtilisateurObservableService,
+
   ],
   bootstrap: [AppComponent]
 })

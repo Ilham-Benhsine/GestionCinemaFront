@@ -9,7 +9,7 @@
     <carousel class="carousel" [pauseOnHover]="true" [autoplayInterval]="3000" [height]="300" [loop]="true"
       [autoplay]="true" [transitionDuration]="200" [margin]="100">
       <div class="carousel-cell">
-        <img (click)="test()" src="assets/image/akira.jpg">
+        <img (click)="openDialog()" src="assets/image/akira.jpg">
       </div>
       <div class="carousel-cell">
         <img src="assets\image\belleFille.jpg">
@@ -94,6 +94,7 @@
         <br>
         <br>
         <br>
+        <button mat-button (click)="openDialog()">Open dialog</button>
       </div>
     </footer>
   </div>

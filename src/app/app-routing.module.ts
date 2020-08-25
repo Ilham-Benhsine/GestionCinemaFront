@@ -1,3 +1,4 @@
+
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { ProflComponent } from './profl/profl.component';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'inscription', component: InscriptionComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'profil', component: ProflComponent },
-  { path: 'deconnexion', component: DeconnexionComponent }
+  { path: 'deconnexion', component: DeconnexionComponent },
 ];
 
 @NgModule({
