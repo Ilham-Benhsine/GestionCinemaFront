@@ -11,66 +11,35 @@ body {
 }
 
 h1 {
-  font-family: fantasy;
+  padding-top: 100000px;
+  padding-bottom: 5%;
+//  font-family: ;
+//  font: heebo;
   font-size: 400%;
   padding-top: 1em;
   color: red;
   text-align: center;
 }
 .page{
-    background-color: royalblue;
+    background-color: #ffffff;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3,100%);
-  overflow:hidden;
-  scroll-behavior: smooth;
- 
+  
+.titreAccueilAffiche {
+  
+}
 
-  section {
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    margin: 20px 0;
-    
-    .arrow__btn{
-        
-    }
-    .item {
-      padding: 0 2px;
-      transition: $duration all;
-      
-      &:hover { 
-        margin: 0 40px;
-        transform: scale(1.1);
-      }
-      
-    }
-    
-    a {
-      position: absolute;
-      color: #fff;
-      text-decoration: none;
-      font-size: 6em;
-      background:rgb(0,0,0);
-      width: 80px;
-      padding: 20px;
-      text-align: center;
-      z-index: 1;
-      
-      &:nth-of-type(1) {
-        top:0; bottom:0; left:0;
-        background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      }
-      &:nth-of-type(2) {
-        top:0; bottom:0; right: 0;
-        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-      }
-      
-    }
-    
-    }
+.titreAccueilSelection {
+  padding-top: 10%;
+}
+
+.footer{
+  height: 20%;
+}
+
+.espace{
+  height: 20%;
+//  padding-top: 300px;
+  background-color: indigo;
 }
 
 // Remove the arrow for Mobile
