@@ -8,6 +8,7 @@ import { CinemaCardComponent } from './component/cinema-card/cinema-card.compone
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { FilmFormComponent } from './component/film-form/film-form.component';
 
 @NgModule({
     imports: [
@@ -16,8 +17,8 @@ import { MatCardModule } from '@angular/material/card';
         MatExpansionModule,
         MatButtonModule
     ],
-    exports: [CinemaCardComponent, FilmCardComponent],
-    declarations: [CinemaCardComponent, FilmCardComponent],
+    exports: [CinemaCardComponent, FilmCardComponent, FilmFormComponent],
+    declarations: [CinemaCardComponent, FilmCardComponent, FilmFormComponent, FilmFormComponent],
     providers: [],
 })
 export class SharedModule { }

@@ -35,6 +35,7 @@ import { ProflComponent } from './profl/profl.component';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { DialogDataExampleComponent } from './shared/component/dialog-data-example/dialog-data-example.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -82,7 +83,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CinemaWebService,
     UtilisateurWebService,
     UtilisateurObservableService,
-
+    MatSnackBar
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-
+import { FilmFormComponent } from './shared/component/film-form/film-form.component';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { ProflComponent } from './profl/profl.component';
 import { ConnexionComponent } from './connexion/connexion.component';
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'connexion', component: ConnexionComponent },
   { path: 'profil', component: ProflComponent },
   { path: 'deconnexion', component: DeconnexionComponent },
+  { path: 'formFilm', component: FilmFormComponent }
 ];
 
 @NgModule({

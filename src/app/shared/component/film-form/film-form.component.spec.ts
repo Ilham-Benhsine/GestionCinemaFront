@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProflComponent } from './profl.component';
+import { FilmFormComponent } from './film-form.component';
 
-describe('ProflComponent', () => {
-  let component: ProflComponent;
-  let fixture: ComponentFixture<ProflComponent>;
+describe('FilmFormComponent', () => {
+  let component: FilmFormComponent;
+  let fixture: ComponentFixture<FilmFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProflComponent ]
+      declarations: [ FilmFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProflComponent);
+    fixture = TestBed.createComponent(FilmFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
