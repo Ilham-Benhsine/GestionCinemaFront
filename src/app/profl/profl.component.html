@@ -1,1 +1,29 @@
-<p>profl works!</p>
+<div class="app-div-principale">
+    <form (ngSubmit)="modifierUtilisateur(utilisateur)" #updateForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label for="pseudo">Pseudo</mat-label>
+            <input id="pseudo" type="text" [(ngModel)]="utilisateur.pseudo" name="pseudo" #pseudo="ngModel" required
+                matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="prenom">Prénom</mat-label>
+            <input id="prenom" type="text" [(ngModel)]="utilisateur.prenom" name="prenom" #prenom="ngModel" required
+                matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="nom">Nom</mat-label>
+            <input id="nom" type="text" [(ngModel)]="utilisateur.nom" name="nom" #nom="ngModel" required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="anniversaire">Date de naissance</mat-label>
+            <input id="anniversaire" type="date" [(ngModel)]="utilisateur.anniversaire" name="anniversaire"
+                #anniversaire="ngModel" required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="password">Mot de passe</mat-label>
+            <input id="password" type="password" [(ngModel)]="utilisateur.password" name="password" #password="ngModel"
+                required matInput>
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="!updateForm.form.valid" color="primary">Valider</button>
+    </form>
+</div>

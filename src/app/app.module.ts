@@ -33,6 +33,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { ProflComponent } from './profl/profl.component';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
     FilmWebService,
     CinemaWebService,
     UtilisateurWebService,
-    UtilisateurObservableService
+    UtilisateurObservableService,
+    MatSnackBar
   ],
   bootstrap: [AppComponent]
 })

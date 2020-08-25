@@ -21,4 +21,8 @@ export class UtilisateurWebService {
     addUtilisateur(util: Utilisateur): Observable<Utilisateur> {
         return this.http.post<Utilisateur>(this.baseUrl + 'utilisateur/inscription/', util);
     }
+
+    updateUtilisateur(util: Utilisateur): Observable<Utilisateur> {
+        return this.http.post<Utilisateur>(this.baseUrl + 'utilisateur/inscription/', util);
+    }
 }
