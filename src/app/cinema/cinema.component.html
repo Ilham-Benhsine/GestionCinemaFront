@@ -5,28 +5,6 @@
     <div class="margeRight"></div>
     <div class="margeLeft"></div>    
 
-    <!--<form class="barre-recherche-cinema">
-      <mat-form-field class="barre-recherche-cinema-mat">
-        <input type="text"
-               class="texte-recherche-cinema"
-               placeholder="Rechercher un cinéma..."
-               aria-label="Cinéma"
-               matInput
-               [formControl]="myControl"
-               [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options | async" [value]="option">
-            {{option}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-    </form>-->
-
-    <!--<select class="barre-recherche-cinema" [(ngModel)]="cinemaChoisis">
-      <option value="">Sélectionner un cinéma...</option>
-      <option *ngFor="let cinema of cinemaList" [value]="cinema.Value">{{cinema.nom}}</option>
-    </select>-->
-
     <input type="text" id="barre-recherche-cinema" class="barre-recherche-cinema" list="listeCinemas" (input)="filtrerListeCinemas()" placeholder="Rechercher une ville, un cinéma..." [(ngModel)]="filtre">
     <datalist id="listeCinemas">
       <option *ngFor="let cinema of listeCinema" [value]="cinema.nom"> {{ cinema.nom }} </option>

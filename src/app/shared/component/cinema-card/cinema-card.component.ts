@@ -15,4 +15,11 @@ export class CinemaCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickSeances() {
+    console.log("test");
+    console.log(this.cinema);
+    console.log("test");
+    window.location.href = "http://localhost:4200/film";
+  }
+
 }

@@ -1,3 +1,4 @@
+import { MatExpansionModule } from '@angular/material/expansion'; 
 import { CinemaWebService } from './shared/webService/cinema.webservice';
 import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
@@ -17,7 +18,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -49,7 +50,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatExpansionModule
   ],
   providers: [
     FilmWebService,
