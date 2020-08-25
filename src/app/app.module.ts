@@ -1,3 +1,4 @@
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MatExpansionModule } from '@angular/material/expansion'; 
 import { CinemaWebService } from './shared/webService/cinema.webservice';
 import { SharedModule } from './shared/shared.module';
@@ -50,7 +51,8 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule,
     MatAutocompleteModule,
-    MatExpansionModule
+    MatExpansionModule,
+    IvyCarouselModule
   ],
   providers: [
     FilmWebService,
