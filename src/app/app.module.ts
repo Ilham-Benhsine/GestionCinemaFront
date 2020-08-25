@@ -21,7 +21,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -47,7 +47,8 @@ import { CommonModule } from '@angular/common';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    IvyCarouselModule
   ],
   providers: [
     FilmWebService,
