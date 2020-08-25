@@ -1,8 +1,6 @@
+import { CinemaWebService } from './../shared/webService/cinema.webservice';
 import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
-
+import { Cinema } from '../shared/beans/Cinema';
 
 @Component({
   selector: 'app-cinema',
@@ -10,25 +8,41 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./cinema.component.scss']
 })
 export class CinemaComponent implements OnInit {
-/*
-  myControl = new FormControl();
-  options: string[] = ['UGC Ciné Cité Les Halles', 'Mk2 Bibliothèque - Paris', 'UGC Ciné Cité Bercy - Paris', 'Gaumont Aquaboulevard - Paris', 'Mégarama - Villeneuve-la-Garenne', 'Pathé Multiplexe - Échirolles', 'Pathé Chavant - Grenoble',
-  'Pathé Bellecour - Lyon', 'Ciné Liberté - Brest', 'Gaumont Multiplexe - Rennes', 'Méga CGR - Rennes', 'Cinéville - Lorient', 'Cinéville - Quimper',
-  'Pathé Docks 76 - Rouen'];
-  filteredOptions: Observable<string[]>;*/
 
-  ngOnInit() {
-    /*this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => this._filter(value))
-      );*/
+  listeCinema: Array<Cinema> = [];
+  listeCinemaFiltree: Array<Cinema> = [];
+  filtre: string;
+
+  constructor(
+    private cinemaWebService: CinemaWebService
+  ) { }
+
+  ngOnInit(): void {
+    this.getCinemas();
   }
 
-  /*private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }*/
+  /**
+   * Méthode de filtrage de la liste de cinémas en fonction de la saisie utilisateur
+   */
+  filtrerListeCinemas(){
+    // réinitialisation de la liste à chaque modification, pour que la liste puisse s'agrandir si l'utilisateur corrige (efface) sa saisie
+    for (let index = 0; index < this.listeCinema.length; index++) {
+      this.listeCinemaFiltree[index] = this.listeCinema[index];
+    }
+    // filtrage
+    this.listeCinemaFiltree = this.listeCinemaFiltree.filter(cinema => cinema.nom.toUpperCase().trim().includes(this.filtre.toUpperCase().trim()));
+  }
+  
+  /**
+   * Méthode de récupération des cinémas dans la base
+   */
+  getCinemas(): void {
+    this.cinemaWebService.getCinemasBack().subscribe(
+      (data) => {
+        this.listeCinema = data;
+        this.listeCinemaFiltree = data;
+      }
+    );
+  }
   
 }

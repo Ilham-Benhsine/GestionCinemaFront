@@ -4,34 +4,65 @@
             <img class="app-img" src="../../../../assets/image/{{film.nomImg}}" alt="Photo of a Shiba Inu">
         </p>
         <mat-card-content class="app-mat-card-content">
+
             <mat-card-title class="app-mat-card-title">{{film.titre | uppercase}}</mat-card-title>
-            <p class="app-p-description">
-                {{film.description}}
-            </p>
-            <p class="">
-                <span class="app-span-dateSortie"><span class="app-span">Date de sortie :
-                    </span>{{film.dateSortie}}</span><span><span class="app-span">Durée : </span>{{film.duree}}</span>
-            </p>
-            <p class="">
-                <span class="app-span">Genre : </span>
-                <span *ngFor="let item of film.genres; let index = index">
-                    {{item.valeur}}<span *ngIf="index < film.genres.length-1">,</span>
-                </span>
-            </p>
-            <p class="" *ngIf="film.realisateurs.length > 0">
-                <span class="app-span">Réaslisé par </span>
-                <span *ngFor="let item of film.realisateurs; let index = index">
-                    {{item.prenom}}
-                    {{item.nom}}<span *ngIf="index < film.realisateurs.length-1">,</span>
-                </span>
-            </p>
-            <p class="" *ngIf="film.acteurs.length > 0">
-                <span class="app-span">Avec </span>
-                <span *ngFor="let item of film.acteurs; let index = index">
-                    {{item.prenom}}
-                    {{item.nom}}<span *ngIf="index < film.acteurs.length-1">,</span>
-                </span>
-            </p>
+
+            <mat-accordion class="app-mat-accordion">
+                <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Description
+                    </mat-panel-title>
+                    <mat-panel-description>
+                    
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="app-film-infos">
+                    <p class="app-p-description">
+                        {{film.description}}
+                    </p>
+                    <p class="">
+                        <span class="app-span-dateSortie"><span class="app-span">Date de sortie :
+                            </span>{{film.dateSortie}}</span><span><span class="app-span">Durée : </span>{{film.duree}}</span>
+                    </p>
+                    <p class="">
+                        <span class="app-span">Genre : </span>
+                        <span *ngFor="let item of film.genres; let index = index">
+                            {{item.valeur}}<span *ngIf="index < film.genres.length-1">,</span>
+                        </span>
+                    </p>
+                    <p class="" *ngIf="film.realisateurs.length > 0">
+                        <span class="app-span">Réaslisé par </span>
+                        <span *ngFor="let item of film.realisateurs; let index = index">
+                            {{item.prenom}}
+                            {{item.nom}}<span *ngIf="index < film.realisateurs.length-1">,</span>
+                        </span>
+                    </p>
+                    <p class="" *ngIf="film.acteurs.length > 0">
+                        <span class="app-span">Avec </span>
+                        <span *ngFor="let item of film.acteurs; let index = index">
+                            {{item.prenom}}
+                            {{item.nom}}<span *ngIf="index < film.acteurs.length-1">,</span>
+                        </span>
+                    </p>
+                </div>
+                </mat-expansion-panel>
+                
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Séances
+                    </mat-panel-title>
+                    <mat-panel-description>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                    <div class="app-seances">
+                        <p *ngFor="let seance of seances"> {{ seance.horaire }} </p>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+
         </mat-card-content>
     </mat-card>
 </div>

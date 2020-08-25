@@ -1,9 +1,13 @@
 .app-cinema-card {
-    max-width: 200px;
+    max-width: 250px;
     margin: 1vw;
   }
-  
-/*.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-}*/
+
+  .app-cinema-card-title {
+    line-height: 1.5em;
+    height: 3em;
+  }
+  .app-cinema-card-subtitle {
+    line-height: 1em;
+    height: 2em;
+  }

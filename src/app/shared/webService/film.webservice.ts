@@ -1,9 +1,8 @@
+import { Seance } from './../beans/Seance';
 import { Film } from './../beans/Film';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
-import { catchError, map } from 'rxjs/operators';
-import { throwError, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +13,10 @@ export class FilmWebService {
 
     constructor(private http: HttpClient) { }
 
-    getFilms(): Observable<Film[]> {
+    getFilmsBack(): Observable<Film[]> {
         return this.http.get<Film[]>(this.baseUrl + 'film/');
+    }
+    getSeancesBack(): Observable<Seance[]> {
+        return this.http.get<Seance[]>(this.baseUrl + 'seance/');
     }
 }

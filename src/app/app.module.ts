@@ -1,6 +1,8 @@
+import { MatExpansionModule } from '@angular/material/expansion'; 
+import { CinemaWebService } from './shared/webService/cinema.webservice';
 import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -16,12 +18,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { FilmComponent } from './film/film.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -48,15 +49,12 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    IvyCarouselModule
+    MatAutocompleteModule,
+    MatExpansionModule
   ],
   providers: [
     FilmWebService,
-
-    MatAutocompleteModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    FormsModule
+    CinemaWebService
   ],
   bootstrap: [AppComponent]
 })
