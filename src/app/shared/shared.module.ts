@@ -1,3 +1,4 @@
+import { UtilisateurWebService } from './webService/utilisateur.webservice';
 import { BrowserModule } from '@angular/platform-browser';
 import { FilmComponent } from './../film/film.component';
 import { FilmCardComponent } from './component/film-card/film-card.component';

@@ -5,9 +5,66 @@
             <a mat-button [routerLink]="'/cinema'"> Cinéma </a>
             <a mat-button [routerLink]="'/film'"> Film </a>
         </div>
-        <div>
-            <a mat-button [routerLink]="'/film'"> <img src="../assets/image/user-4-24.png" /> </a>
+        <div class="app-div-button">
+            <div [hidden]="utilisateur.type != 'administrateur'">
+                <button mat-icon-button [matMenuTriggerFor]="param" aria-label="Example icon-button with a menu">
+                    <mat-icon>settings</mat-icon>
+                </button>
+                <mat-menu #param="matMenu">
+                    <div>
+                        <button routerLink="/inscription" mat-menu-item>
+                            <span>Cinéma</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button routerLink="/connexion" mat-menu-item>
+                            <span>Salle</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button routerLink="/profil" mat-menu-item>
+                            <span>Séance</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button routerLink="/deconnexion" mat-menu-item>
+                            <span>Film</span>
+                        </button>
+                    </div>
+                </mat-menu>
+            </div>
+            <diV>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <div [hidden]="utilisateur.pseudo !== undefined && utilisateur.pseudo !== null">
+                        <button routerLink="/inscription" mat-menu-item>
+                            <mat-icon>person_add</mat-icon>
+                            <span>Inscription</span>
+                        </button>
+                    </div>
+                    <div [hidden]="utilisateur.pseudo !== undefined && utilisateur.pseudo !== null">
+                        <button routerLink="/connexion" mat-menu-item>
+                            <mat-icon>power_settings_new</mat-icon>
+                            <span>Connexion</span>
+                        </button>
+                    </div>
+                    <div [hidden]="utilisateur.pseudo === undefined || utilisateur.pseudo === null">
+                        <button routerLink="/profil" mat-menu-item>
+                            <mat-icon>person</mat-icon>
+                            <span>Profil</span>
+                        </button>
+                    </div>
+                    <div [hidden]="utilisateur.pseudo === undefined || utilisateur.pseudo === null">
+                        <button routerLink="/deconnexion" mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span>Déconnexion</span>
+                        </button>
+                    </div>
+                </mat-menu>
+            </diV>
         </div>
     </mat-toolbar-row>
-    </mat-toolbar>
+</mat-toolbar>
 <router-outlet></router-outlet>

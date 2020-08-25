@@ -1,0 +1,29 @@
+<div class="app-div-principale">
+    <form (ngSubmit)="ajouterNouvelUtilisateur(nouvelUtilisateur)" #subForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label for="pseudo">Pseudo</mat-label>
+            <input id="pseudo" type="text" [(ngModel)]="nouvelUtilisateur.pseudo" name="pseudo" #pseudo="ngModel"
+                required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="prenom">Prénom</mat-label>
+            <input id="prenom" type="text" [(ngModel)]="nouvelUtilisateur.prenom" name="prenom" #prenom="ngModel"
+                required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="nom">Nom</mat-label>
+            <input id="nom" type="text" [(ngModel)]="nouvelUtilisateur.nom" name="nom" #nom="ngModel" required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="anniversaire">Date de naissance</mat-label>
+            <input id="anniversaire" type="date" [(ngModel)]="nouvelUtilisateur.anniversaire" name="anniversaire"
+                #anniversaire="ngModel" required matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="password">Mot de passe</mat-label>
+            <input id="password" type="password" [(ngModel)]="nouvelUtilisateur.password" name="password"
+                #password="ngModel" required matInput>
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="!subForm.form.valid" color="primary">Se connecter</button>
+    </form>
+</div>

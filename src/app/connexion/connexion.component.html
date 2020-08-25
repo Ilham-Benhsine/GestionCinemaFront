@@ -1,0 +1,15 @@
+<div class="app-div-principale">
+    <form (ngSubmit)="connecterUtilisateur(utilisateur)" #logForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label for="pseudo">Pseudo</mat-label>
+            <input id="pseudo" type="text" [(ngModel)]="utilisateur.pseudo" name="pseudo" #pseudo="ngModel" required
+                matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="password">Mot de passe</mat-label>
+            <input id="password" type="password" [(ngModel)]="utilisateur.password" name="password" #password="ngModel"
+                required matInput>
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="!logForm.form.valid" color="primary">Se connecter</button>
+    </form>
+</div>
