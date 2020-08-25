@@ -1,17 +1,21 @@
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { MatExpansionModule } from '@angular/material/expansion'; 
+import { MatExpansionModule } from '@angular/material/expansion';
 import { CinemaWebService } from './shared/webService/cinema.webservice';
+import { UtilisateurObservableService } from './shared/observable/utilisateur-observable.service';
+import { UtilisateurWebService } from './shared/webService/utilisateur.webservice';
 import { SharedModule } from './shared/shared.module';
 import { FilmWebService } from './shared/webService/film.webservice';
-import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
+import { MatListModule, MatSelectionList } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,9 +25,14 @@ import { CinemaComponent } from './cinema/cinema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { ProflComponent } from './profl/profl.component';
+import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 
 
 @NgModule({
@@ -31,7 +40,11 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     AccueilComponent,
     FilmComponent,
-    CinemaComponent
+    CinemaComponent,
+    InscriptionComponent,
+    ConnexionComponent,
+    ProflComponent,
+    DeconnexionComponent
   ],
 
   imports: [
@@ -56,7 +69,15 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     FilmWebService,
-    CinemaWebService
+    CinemaWebService,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    UtilisateurWebService,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    UtilisateurObservableService
   ],
   bootstrap: [AppComponent]
 })
