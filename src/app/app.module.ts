@@ -65,18 +65,18 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
     CommonModule,
     MatAutocompleteModule,
     MatExpansionModule,
-    IvyCarouselModule
-  ],
-  providers: [
-    FilmWebService,
-    CinemaWebService,
+    IvyCarouselModule,
     MatMenuModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    UtilisateurWebService,
     MatAutocompleteModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    FilmWebService,
+    CinemaWebService,
+    UtilisateurWebService,
     UtilisateurObservableService
   ],
   bootstrap: [AppComponent]
