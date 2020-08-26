@@ -24,6 +24,6 @@
             <input id="password" type="password" [(ngModel)]="utilisateur.password" name="password" #password="ngModel"
                 required matInput>
         </mat-form-field>
-        <button mat-button type="submit" [disabled]="!updateForm.form.valid" color="primary">Valider</button>
+        <button mat-raised-button type="submit" [disabled]="!updateForm.form.valid" color="primary">Valider</button>
     </form>
 </div>

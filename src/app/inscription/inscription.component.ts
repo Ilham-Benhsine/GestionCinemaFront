@@ -54,7 +54,7 @@ export class InscriptionComponent implements OnInit {
 
   openSnackBar(message: string): void {
     this.snackBar.open(message, 'Fermer', {
-      duration: 1000,
+      duration: 2000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

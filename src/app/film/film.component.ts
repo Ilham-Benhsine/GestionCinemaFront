@@ -34,9 +34,9 @@ export class FilmComponent implements OnInit {
     );
   }
 
-   /**
-   * Méthode de récupération des séances dans la base
-   */
+  /**
+  * Méthode de récupération des séances dans la base
+  */
   getSeances(): void {
     this.filmWebService.getSeancesBack().subscribe(
       (data) => {
@@ -51,7 +51,7 @@ export class FilmComponent implements OnInit {
    * @param film : le film dont on veut retourner les séances
    */
   filtrerSeances(film: Film): Array<Seance> {
-    
+
     return this.listeSeanceFiltree;
   }
 

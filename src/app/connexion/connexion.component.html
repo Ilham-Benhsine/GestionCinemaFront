@@ -10,6 +10,6 @@
             <input id="password" type="password" [(ngModel)]="utilisateur.password" name="password" #password="ngModel"
                 required matInput>
         </mat-form-field>
-        <button mat-button type="submit" [disabled]="!logForm.form.valid" color="primary">Se connecter</button>
+        <button mat-raised-button type="submit" [disabled]="!logForm.form.valid" color="primary">Se connecter</button>
     </form>
 </div>

@@ -1,0 +1,29 @@
+.app-div-principale {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;;
+}
+
+form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin-bottom: 15px;
+}
+
+.app-div-time-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-div-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-div-time-date mat-form-field{
+    width: 45%;
+}
