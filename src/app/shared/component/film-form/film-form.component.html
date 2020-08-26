@@ -25,7 +25,20 @@
         <div class="app-div-image">
             <mat-label for="nomImg">Affiche du film</mat-label>
             <input id="nomImg" type="file" [(ngModel)]="nouveauFilm.nomImg" name="nomImg">
-        </div>        
-        <button mat-raised-button type="submit" [disabled]="!addMovieForm.form.valid" color="primary">Ajouter le film</button>
+        </div>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Genres
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of listeGenres">
+                <mat-checkbox [(ngModel)]="item.check" name="listeGenres">{{item.valeur}}</mat-checkbox>
+            </div>
+        </mat-expansion-panel>
+
+
+        <button mat-raised-button type="submit" [disabled]="!addMovieForm.form.valid" color="primary">Ajouter le
+            film</button>
     </form>
 </div>
