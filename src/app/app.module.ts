@@ -1,3 +1,6 @@
+import { SeanceWebService } from './shared/webService/seance.webservice';
+import { SalleWebService } from './shared/webService/salle.webservice';
+import { CinemaObservableService } from './shared/observable/cinema-observable.service';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CinemaWebService } from './shared/webService/cinema.webservice';
@@ -71,13 +74,16 @@ import { DeconnexionComponent } from './deconnexion/deconnexion.component';
     MatSelectModule,
     MatInputModule,
     MatAutocompleteModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     FilmWebService,
     CinemaWebService,
     UtilisateurWebService,
-    UtilisateurObservableService
+    UtilisateurObservableService,
+    CinemaObservableService,
+    SalleWebService,
+    SeanceWebService
   ],
   bootstrap: [AppComponent]
 })

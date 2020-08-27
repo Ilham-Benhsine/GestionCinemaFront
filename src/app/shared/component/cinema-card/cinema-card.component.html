@@ -1,4 +1,4 @@
-<mat-card class="app-cinema-card">
+<mat-card class="app-cinema-card" (click)="clickSeances(cinema)">
     <mat-card-header>
       <mat-card-title class="app-cinema-card-title"> {{ cinema.nom }} </mat-card-title>
       <mat-card-subtitle class="app-cinema-card-subtitle"> {{ cinema.adresse }} </mat-card-subtitle>
@@ -8,8 +8,8 @@
     Nombres de salles : {{ cinema.nombreSalles }}  
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button color="primary" (click)="clickSeances()">Voir séances</button>
-      <button mat-button color="primary">Ouvrir map</button>
+      <button mat-raised-button color="primary" (click)="clickSeances(cinema)">Voir séances</button>
+      <button mat-raised-button color="primary">Ouvrir map</button>
     </mat-card-actions>
 </mat-card>
   

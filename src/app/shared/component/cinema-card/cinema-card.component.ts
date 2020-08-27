@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
+import { Cinema } from './../../beans/Cinema';
+import { CinemaObservableService } from './../../observable/cinema-observable.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { Cinema } from '../../beans/Cinema';
 
 @Component({
   selector: 'app-cinema-card',
@@ -10,16 +12,15 @@ export class CinemaCardComponent implements OnInit {
 
   @Input() cinema: Cinema;
 
-  constructor() { }
+  constructor(private cinemaObservableService: CinemaObservableService,
+              private router: Router ) { }
 
   ngOnInit(): void {
   }
 
-  clickSeances() {
-    console.log("test");
-    console.log(this.cinema);
-    console.log("test");
-    window.location.href = "http://localhost:4200/film";
+  clickSeances(cinema: Cinema) {
+    this.cinemaObservableService.setCinemaSubject(cinema);
+    this.router.navigate(['/film']);
   }
 
 }

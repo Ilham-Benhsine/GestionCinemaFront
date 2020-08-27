@@ -31,6 +31,7 @@ export class CinemaComponent implements OnInit {
     }
     // filtrage
     this.listeCinemaFiltree = this.listeCinemaFiltree.filter(cinema => cinema.nom.toUpperCase().trim().includes(this.filtre.toUpperCase().trim()));
+    console.log(this.listeCinemaFiltree);
   }
   
   /**

@@ -5,9 +5,9 @@
     <div class="margeRight"></div>
     <div class="margeLeft"></div>    
 
-    <input type="text" id="barre-recherche-cinema" class="barre-recherche-cinema" list="listeCinemas" (input)="filtrerListeCinemas()" placeholder="Rechercher une ville, un cinéma..." [(ngModel)]="filtre">
-    <datalist id="listeCinemas">
-      <option *ngFor="let cinema of listeCinema" [value]="cinema.nom"> {{ cinema.nom }} </option>
+    <input type="text" id="barre-recherche-cinema" class="barre-recherche-cinema" list="listeCinemasAfficher" (input)="filtrerListeCinemas()" placeholder="Rechercher une ville, un cinéma..." [(ngModel)]="filtre">
+    <datalist id="listeCinemasAfficher">
+      <option [value]="cinema.nom" *ngFor="let cinema of listeCinemaFiltree"> {{ cinema.nom }} </option>
     </datalist>
       
     <div class="liste-cards-cinema">

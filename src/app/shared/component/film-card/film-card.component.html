@@ -11,7 +11,7 @@
                 <mat-expansion-panel expanded>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        Description
+                    Description
                     </mat-panel-title>
                     <mat-panel-description>
                     
@@ -20,7 +20,7 @@
                 <div class="app-film-infos">
                     <p class="app-p-description">
                         {{film.description}}
-                    </p>
+                    </p>                    
                     <p class="">
                         <span class="app-span-dateSortie"><span class="app-span">Date de sortie :
                             </span>{{film.dateSortie}}</span><span><span class="app-span">Durée : </span>{{film.duree}}</span>
@@ -32,7 +32,7 @@
                         </span>
                     </p>
                     <p class="" *ngIf="film.realisateurs.length > 0">
-                        <span class="app-span">Réaslisé par </span>
+                        <span class="app-span">Réalisé par </span>
                         <span *ngFor="let item of film.realisateurs; let index = index">
                             {{item.prenom}}
                             {{item.nom}}<span *ngIf="index < film.realisateurs.length-1">,</span>
@@ -52,13 +52,73 @@
                                     (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                    Séances
+                    Réserver séances
                     </mat-panel-title>
                     <mat-panel-description>
                     </mat-panel-description>
                 </mat-expansion-panel-header>
-                    <div class="app-seances">
-                        <p *ngFor="let seance of seances"> {{ seance.horaire }} </p>
+                    <div id="app-parent-seances">
+
+
+                        <div id="app-seances-boutton-cinema">
+                            <button mat-raised-button color="primary" (click)="allerPageCinema()">Choisir un cinéma</button>
+                        </div>
+
+
+                        <table id="app-seances-table">
+                            <thead>
+                                <tr>
+                                    <th>Vendredi 28/08</th>
+                                    <th>Samedi 29/08</th>
+                                    <th>Dimanche 30/08</th>
+                                    <th>Lundi 31/08</th>
+                                    <th>Mardi 01/09</th>
+                                    <th>Mercredi 02/09</th>
+                                    <th>Jeudi 03/09</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                    <td (click)="allerPageConnection()">11h00</td>
+                                </tr>
+                                <tr>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                    <td (click)="allerPageConnection()">14h00</td>
+                                </tr>
+                                <tr>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                    <td (click)="allerPageConnection()">16h30</td>
+                                </tr>
+                                <tr>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                    <td (click)="allerPageConnection()">20h00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
                     </div>
                 </mat-expansion-panel>
             </mat-accordion>
