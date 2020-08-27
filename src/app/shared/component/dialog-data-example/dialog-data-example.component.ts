@@ -1,7 +1,7 @@
 import { FilmCardComponent } from './../film-card/film-card.component';
 import { Film } from './../../beans/Film';
 import { Component, OnInit, Inject, Input } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { Seance } from '../../beans/Seance';
 import { FilmWebService } from '../../webService/film.webservice';
 
@@ -25,7 +25,11 @@ export class DialogDataExampleComponent implements OnInit {
   listeFilmALAffiche: Film[];
   @Input() film: Film = this.data;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any , private filmWebService: FilmWebService) { }
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any ,
+    private filmWebService: FilmWebService,
+    public dialogRef: MatDialogRef<DialogDataExampleComponent>
+   ) { }
 
 
   ngOnInit(): void {
@@ -34,7 +38,7 @@ export class DialogDataExampleComponent implements OnInit {
     console.log('item', this.data);
   }
 
- /* getFilmALAffiche(): void {
+  getFilmALAffiche(): void {
     this.filmWebService.getFilmsBack().subscribe(
       (data) => {
        // console.log('TestWebServiceFilm', data);
@@ -42,5 +46,9 @@ export class DialogDataExampleComponent implements OnInit {
 
       }
     );
-  }*/
+  }
+  closeAll(text: string): void {
+    this.dialogRef.close();
+    
+  }
 }

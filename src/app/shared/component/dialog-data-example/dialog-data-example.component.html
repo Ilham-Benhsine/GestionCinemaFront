@@ -16,4 +16,4 @@
         </div>
     </div>
 </div>-->
-<app-film-card [film]="data.film"></app-film-card>
+<app-film-card [film]="data.film" (eventEmiter)="closeAll($event)"></app-film-card>
