@@ -1,0 +1,47 @@
+.film{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.titre{
+    
+}
+
+.dateSortie{
+
+}
+
+.duree{
+    
+}
+
+.description{
+    
+}
+
+.acteurs{
+    height: auto;
+    width: auto;
+}
+
+.realisateur{
+    height: auto;
+    width: auto;
+}
+.label{
+    font-size :2em ;
+    font-family: serif;
+}
+.img{
+    
+    height: auto;
+    width: 200px;
+}
+.text{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}

@@ -1,1 +1,19 @@
-<p>dialog-data-example works!</p>
+<!--<div class="film">
+    <app-film-card class="app-film-card" ></app-film-card>
+    <img class="img" src="assets/image/{{data.film.nomImg}}">
+    <div class="text">
+        <div class="titre">
+            <p class="label"> Titre : </p>{{data.film.titre | json}}
+        </div>
+        <div class="dateSortie">
+            <p class="label"> Sortie : </p>{{data.film.dateSortie | json}}
+        </div>
+        <div class="duree">
+            <p class="label"> Durée : </p>{{data.film.duree | json}}
+        </div>
+        <div class="description">
+            <p class="label"> Synopsis : </p>{{data.film.description | json}}
+        </div>
+    </div>
+</div>-->
+<app-film-card [film]="data.film"></app-film-card>

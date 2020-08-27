@@ -19,4 +19,7 @@ export class FilmWebService {
     getSeancesBack(): Observable<Seance[]> {
         return this.http.get<Seance[]>(this.baseUrl + 'seance/');
     }
+    getFilmsALAfficheBack(): Observable<Film[]> {
+        return this.http.get<Film[]>(this.baseUrl + 'film/alaffiche');
+    }
 }

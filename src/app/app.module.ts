@@ -35,6 +35,7 @@ import { ProflComponent } from './profl/profl.component';
 import { DeconnexionComponent } from './deconnexion/deconnexion.component';
 import { DialogDataExampleComponent } from './shared/component/dialog-data-example/dialog-data-example.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AngularResizedEventModule } from 'angular-resize-event';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    AngularResizedEventModule
   ],
   providers: [
     FilmWebService,

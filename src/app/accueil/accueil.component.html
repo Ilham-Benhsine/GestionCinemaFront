@@ -1,43 +1,42 @@
-<div class="page">
+<div class="page" >
 
-  <div>
-
+  <div >
     <!-- Titre carousel du haut-->
     <h1 class="titreAccueilAffiche">A l'affiche</h1>
 
     <!-- carousel du haut (films tendance)-->
-    <carousel class="carousel" [pauseOnHover]="true" [autoplayInterval]="3000" [height]="300" [loop]="true"
-      [autoplay]="true" [transitionDuration]="200" [margin]="100">
-      <div class="carousel-cell">
-        <img (click)="openDialog()" src="assets/image/akira.jpg">
+    <carousel class="carousel" [pauseOnHover]="false" [autoplayInterval]="3000" [height]="300" [loop]="false"
+      [autoplay]="true" [transitionDuration]="200" [margin]="100" >
+      <div class="carousel-cell" *ngFor="let film of listeFilmALAffiche">
+        <img (click)="openDialog(film)" src="assets/image/{{film.nomImg}}">
+      </div>
+     <!-- <div class="carousel-cell">
+        <img (click)="openDialog()" src="assets\image\belleFille.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\belleFille.jpg">
+        <img (click)="openDialog()" src="assets\image\bigfoot.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\bigfoot.jpg">
+        <img (click)="openDialog()" src="assets\image\blancheNeige.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\blancheNeige.jpg">
+        <img (click)="openDialog()" src="assets\image\dreams.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\dreams.jpg">
+        <img (click)="openDialog()" src="assets\image\yakari.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\yakari.jpg">
+        <img (click)="openDialog()" src="assets\image\theRental.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\theRental.jpg">
+        <img (click)="openDialog()" src="assets\image\mignonnes.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\mignonnes.jpg">
+        <img (click)="openDialog()" src="assets\image\enrage.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\enrage.jpg">
-      </div>
-      <div class="carousel-cell">
-        <img src="assets\image\myHeroAcademia.jpg">
-      </div>
+        <img (click)="openDialog()"src="assets\image\myHeroAcademia.jpg">
+      </div>-->
     </carousel>
 
 
@@ -48,34 +47,34 @@
     <carousel [pauseOnHover]="true" [autoplayInterval]="3000" [height]="300" [loop]="true"
     [autoplay]="true" [transitionDuration]="200" [margin]="100">
       <div class="carousel-cell">
-        <img src="assets/image/spectre.jpg">
+        <img (click)="openDialog(film)" src="assets/image/spectre.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\belleFille.jpg">
+        <img (click)="openDialog(film)" src="assets\image\belleFille.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\harry1.jpg">
+        <img (click)="openDialog(film)" src="assets\image\harry1.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\leBonLaBruteEtLeTruand.jpg">
+        <img (click)="openDialog(film)" src="assets\image\leBonLaBruteEtLeTruand.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\harry3.jpg">
+        <img (click)="openDialog(film)" src="assets\image\harry3.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\greenland.jpg">
+        <img (click)="openDialog(film)" src="assets\image\greenland.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\theRental.jpg">
+        <img (click)="openDialog(film)" src="assets\image\theRental.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\blancheNeige.jpg">
+        <img (click)="openDialog(film)" src="assets\image\blancheNeige.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\yakari.jpg">
+        <img (click)="openDialog(film)" src="assets\image\yakari.jpg">
       </div>
       <div class="carousel-cell">
-        <img src="assets\image\terribleJungle.jpg">
+        <img (click)="openDialog(film)" src="assets\image\terribleJungle.jpg">
       </div>
     </carousel>
 
@@ -94,7 +93,6 @@
         <br>
         <br>
         <br>
-        <button mat-button (click)="openDialog()">Open dialog</button>
       </div>
     </footer>
   </div>
