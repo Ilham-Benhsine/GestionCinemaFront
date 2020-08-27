@@ -20,4 +20,7 @@ export class FilmWebService {
     addFilm(film: Film): Observable<Film> {
         return this.http.post<Film>(this.baseUrl + 'film/ajouter/', film);
     }
+    getFilmsALAfficheBack(): Observable<Film[]> {
+        return this.http.get<Film[]>(this.baseUrl + 'film/alaffiche');
+    }
 }

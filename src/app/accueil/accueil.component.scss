@@ -8,6 +8,8 @@ html {
 body {
   margin: 0;
   background-color: #000;
+  height: 100%;
+  width: 80%;
 }
 
 h1 {
@@ -17,19 +19,16 @@ h1 {
 //  font: heebo;
   font-size: 400%;
   padding-top: 1em;
-  color: red;
+  color: indigo;
   text-align: center;
 }
 .page{
     background-color: #ffffff;
 }
-  
-.titreAccueilAffiche {
-  
-}
+
 
 .titreAccueilSelection {
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 .footer{
@@ -42,8 +41,10 @@ h1 {
   background-color: indigo;
 }
 .carousel{
+ width: auto;
   z-index: 0;
 }
+
 
 // Remove the arrow for Mobile
 @media only screen and (max-width: 600px) {
