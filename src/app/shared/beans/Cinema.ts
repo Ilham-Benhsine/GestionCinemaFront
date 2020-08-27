@@ -1,3 +1,5 @@
+import { Salle } from './Salle';
+
 export class Cinema {
     id: number;
     adresse: string;
@@ -5,4 +7,5 @@ export class Cinema {
     nombreSalles: number;
     prixht: number;
     sup3d: number;
+    salles: Array<Salle>;
 }

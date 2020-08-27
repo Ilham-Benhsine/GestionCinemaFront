@@ -7,29 +7,49 @@
     width: 80%;
     display: flex;
     height: 30vw;
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 
 .app-p-img{
-    width: 25%;
+    width: 27%;
     flex-shrink: 0;
 }
 
-.app-img{
+.app-img {
     width: 100%;
+    transition: all .2s ease-in-out;
+}
+.app-img:hover {
+    transform: scale(1.05);
 }
 
 .app-mat-card-content {
-    padding: 1.3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    width: 70%;
 }
 
 .app-mat-card-title {
-    margin-bottom: 0.7em;
-    height: 10%;
+    margin-bottom: 0.5em;
+    //height: 5%;
+}
+
+.app-film-infos {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    //line-height: 1.2em;
+    //font-size: 0.8em;
 }
 
 .app-p-description {
     text-align: justify;
+    max-height: 7em;
+    overflow-y: scroll;
+    //overflow: hidden;
+    /*text-overflow: ellipsis;
+    white-space: nowrap;*/
+    font-size: 1em;
+    padding: 1em;
 }
 
 .app-span-dateSortie {
@@ -48,10 +68,40 @@
     height: 45%;
     overflow: scroll;
 }*/
+mat-panel-title {
+    font-style: italic;
+    //font-weight: bold;
+    color: #673ab7;
+    }
+
 
 .app-mat-accordion {
-    height: 100%;
+    //max-height: 100%;
+    overflow: hidden;
 }
 .mat-form-field + .mat-form-field {
     margin-left: 8px;
   }
+
+#app-seances-boutton-cinema {
+    text-align: center;
+}
+
+#app-seances-table {
+    width: 100%;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+th {
+    font-weight: 500;
+}
+td:hover {
+    cursor: pointer;
+    font-weight: 900;
+    background-color: #673ab7;
+    color: white;
+}
+th, td {
+    padding: 5px;
+}

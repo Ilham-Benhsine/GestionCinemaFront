@@ -1,5 +1,4 @@
 import { Seance } from './../beans/Seance';
-import { Film } from './../beans/Film';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,16 +6,13 @@ import { Observable } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class FilmWebService {
+export class SeanceWebService {
 
     baseUrl = 'http://localhost:8080/';
 
     constructor(private http: HttpClient) { }
 
-    getFilmsBack(): Observable<Film[]> {
-        return this.http.get<Film[]>(this.baseUrl + 'film/');
-    }
-    /*getSeancesBack(): Observable<Seance[]> {
+    getSeancesBack(): Observable<Seance[]> {
         return this.http.get<Seance[]>(this.baseUrl + 'seance/');
-    }*/
+    }
 }
