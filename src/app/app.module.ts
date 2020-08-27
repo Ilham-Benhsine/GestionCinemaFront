@@ -1,3 +1,4 @@
+import { SeanceWebService } from './shared/webService/seance.webservice';
 import { GenreWebService } from './shared/webService/genre.webservice';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
@@ -86,6 +87,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     UtilisateurWebService,
     UtilisateurObservableService,
     MatSnackBar,
+    SeanceWebService
   ],
   bootstrap: [
     AppComponent

@@ -51,7 +51,6 @@ export class FilmComponent implements OnInit {
    * @param film : le film dont on veut retourner les séances
    */
   filtrerSeances(film: Film): Array<Seance> {
-
     return this.listeSeanceFiltree;
   }
 

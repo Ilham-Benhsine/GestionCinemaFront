@@ -3,7 +3,6 @@ import { FilmWebService } from './../../webService/film.webservice';
 import { Film } from './../../beans/Film';
 import { Genre } from '../../beans/Genre';
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-film-form',
@@ -14,7 +13,6 @@ export class FilmFormComponent implements OnInit {
 
   nouveauFilm = new Film();
   listeGenres = new Array<Genre>();
-  listeGenresFilm = new Array<Genre>();
 
   constructor(
     private filmWebService: FilmWebService,
@@ -48,7 +46,5 @@ export class FilmFormComponent implements OnInit {
       }
     );
   }
-
-
 
 }

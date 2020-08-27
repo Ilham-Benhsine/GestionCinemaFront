@@ -1,8 +1,8 @@
+import { Film } from './Film';
 export class Seance {
     id: number;
-    horaire: any;
+    horaire = new Date();
     placesSansReservation: number;
     sup3d: boolean;
-    film_id: number;
-    id_salle: number;
+    film = new Film();
 }

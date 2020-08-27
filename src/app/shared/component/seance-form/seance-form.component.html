@@ -1,0 +1,25 @@
+<div class="app-div-principale">
+    <form class="example-form" (ngSubmit)="ajouterNouvelleSeance()" #addSeanceForm="ngForm">
+        <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Film" aria-label="Number" matInput [formControl]="controleTitre"
+                [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let film of filteredFilms | async" [value]="film.titre" (click)="selected(film.id)">
+                    {{film.titre}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <div class="app-div-time-date">
+            <mat-form-field appearance="fill">
+                <mat-label for="heure">Heure</mat-label>
+                <input id="heure" type="time" [formControl]="controleTime" required matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label for="date">Date de sotrie</mat-label>
+                <input id="date" type="date" [formControl]="controleDate" required matInput>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button type="submit" [disabled]="!addSeanceForm.form.valid" color="primary">Ajouter la
+            séance</button>
+    </form>
+</div>
