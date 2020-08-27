@@ -1,1 +1,38 @@
-<p>film-form works!</p>
+<div class="app-div-principale">
+    <form (ngSubmit)="ajouterNouveauFilm(nouveauFilm)" #addMovieForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label for="titre">Titre</mat-label>
+            <input id="titre" type="text" [(ngModel)]="nouveauFilm.titre" name="titre" #titre="ngModel" required
+                matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label for="description">Description</mat-label>
+            <textarea id="description" type="text" [(ngModel)]="nouveauFilm.description" name="description"
+                #description="ngModel" required matInput></textarea>
+        </mat-form-field>
+        <div class="app-div-time-date">
+            <mat-form-field appearance="fill">
+                <mat-label for="duree">Durée</mat-label>
+                <input id="duree" type="time" [(ngModel)]="nouveauFilm.duree" name="duree" #duree="ngModel" required
+                    matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label for="dateSortie">Date de sotrie</mat-label>
+                <input id="dateSortie" type="date" [(ngModel)]="nouveauFilm.dateSortie" name="dateSortie"
+                    #dateSortie="ngModel" required matInput>
+            </mat-form-field>
+        </div>
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Genres
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div *ngFor="let item of listeGenres">
+                <mat-checkbox [(ngModel)]="item.check" name="listeGenres">{{item.valeur}}</mat-checkbox>
+            </div>
+        </mat-expansion-panel>
+        <button mat-raised-button type="submit" [disabled]="!addMovieForm.form.valid" color="primary">Ajouter le
+            film</button>
+    </form>
+</div>

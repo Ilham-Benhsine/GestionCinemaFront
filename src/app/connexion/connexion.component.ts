@@ -51,7 +51,7 @@ export class ConnexionComponent implements OnInit {
 
   openSnackBar(): void {
     this.snackBar.open(this.utilisateur.pseudo + ' est connecté', 'Fermer', {
-      duration: 1000,
+      duration: 2000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

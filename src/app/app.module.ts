@@ -1,6 +1,7 @@
-import { SeanceWebService } from './shared/webService/seance.webservice';
 import { SalleWebService } from './shared/webService/salle.webservice';
 import { CinemaObservableService } from './shared/observable/cinema-observable.service';
+import { GenreWebService } from './shared/webService/genre.webservice';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CinemaWebService } from './shared/webService/cinema.webservice';
@@ -40,7 +41,6 @@ import { DialogDataExampleComponent } from './shared/component/dialog-data-examp
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +53,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     DeconnexionComponent,
     DialogDataExampleComponent
   ],
-
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -79,18 +78,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
   ],
   providers: [
     FilmWebService,
     CinemaWebService,
+    GenreWebService,
     UtilisateurWebService,
     UtilisateurObservableService,
     MatSnackBar,
     CinemaObservableService,
-    SalleWebService,
-    SeanceWebService
+    SalleWebService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

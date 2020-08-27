@@ -37,7 +37,7 @@ export class InscriptionComponent implements OnInit {
         } else {
           this.addUtilisateurInLocalStorage(utilisateurReturn);
           this.addUtilisateurInObservable(utilisateurReturn);
-          this.openSnackBar('Profil mis à jour');
+          this.openSnackBar('Inscription validée');
           this.router.navigate(['/accueil']);
         }
       }
@@ -54,7 +54,7 @@ export class InscriptionComponent implements OnInit {
 
   openSnackBar(message: string): void {
     this.snackBar.open(message, 'Fermer', {
-      duration: 1000,
+      duration: 2000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

@@ -15,4 +15,8 @@ export class SeanceWebService {
     getSeancesBack(): Observable<Seance[]> {
         return this.http.get<Seance[]>(this.baseUrl + 'seance/');
     }
+
+    addSeance(seance: Seance): Observable<Seance> {
+        return this.http.post<Seance>(this.baseUrl + 'seance/ajouter/', seance);
+    }
 }

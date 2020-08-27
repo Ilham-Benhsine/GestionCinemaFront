@@ -16,7 +16,8 @@ export class FilmWebService {
     getFilmsBack(): Observable<Film[]> {
         return this.http.get<Film[]>(this.baseUrl + 'film/');
     }
-    /*getSeancesBack(): Observable<Seance[]> {
-        return this.http.get<Seance[]>(this.baseUrl + 'seance/');
-    }*/
+
+    addFilm(film: Film): Observable<Film> {
+        return this.http.post<Film>(this.baseUrl + 'film/ajouter/', film);
+    }
 }

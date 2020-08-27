@@ -8,7 +8,7 @@ export class Film {
     nomImg: string;
     dateSortie: any;
     duree: any;
-    genres: Array<Genre>;
-    acteurs: Array<Acteur>;
-    realisateurs: Array<Realisateur>;
+    genres = new Array<Genre>();
+    acteurs = new Array<Acteur>();
+    realisateurs = new Array<Realisateur>();
 }

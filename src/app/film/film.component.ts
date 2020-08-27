@@ -39,9 +39,9 @@ export class FilmComponent implements OnInit {
   }
 
   ngOnDestroy() {
-      if (this.subscription$) {
-        this.subscription$.unsubscribe();
-      }
+    if (this.subscription$) {
+      this.subscription$.unsubscribe();
+    }
   }
 
   getSalles(): void {
@@ -57,22 +57,22 @@ export class FilmComponent implements OnInit {
     this.filmWebService.getFilmsBack().subscribe(
       (data) => {
         this.listeFilm = data;
-  
+
         // filtrage par cinema
         this.subscription$ = this.cinemaObservableService.getCinemaSubject().subscribe(
           (cinemaFiltre: Cinema) => {
-            
+
             // test si un cinéma est sélectionné pour filtrer
-            if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0){
+            if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0) {
               var filmDejaPresent = false;
-              
+
               // on ajoute uniquement les films qui ont une séance dans ce cinéma
               // pour chaque seance de chaque salle de ce cinéma ...
               cinemaFiltre.salles.forEach(salle => {
                 salle.seances.forEach(seance => {
                   // ... on boucle sur les films déjà enregistré pour ne pas le rentrer 2 fois
                   this.listeFilmFiltree.forEach(film => {
-                    if(seance?.film.id === film.id) {
+                    if (seance?.film.id === film.id) {
                       filmDejaPresent = true;
                     }
                   });
@@ -84,17 +84,17 @@ export class FilmComponent implements OnInit {
                   }
                 });
               });
-              
+
             }
             // si pas de cinéma sélectionné, afficher tous les films
-            if (Object.keys(cinemaFiltre).length == 0) {
-              
-              
+            if (Object.keys(cinemaFiltre).length === 0) {
+
+
               this?.listeFilm.forEach(film => {
                 this.listeFilmFiltree.push(film);
-                
+
               });
-              
+
             }
 
           }, (error) => {
@@ -112,19 +112,19 @@ export class FilmComponent implements OnInit {
     this.getSeances();
   }
 
-   /**
-   * Méthode de récupération des séances dans la base
-   */
+  /**
+  * Méthode de récupération des séances dans la base
+  */
   getSeances(): void {
     this.seanceWebService.getSeancesBack().subscribe(
       (data) => {
         this.listeSeance = data;
         this.listeSeanceFiltree = data;
-        
-        
+
+
         this.subscription$ = this.cinemaObservableService.getCinemaSubject().subscribe(
           (cinemaFiltre: Cinema) => {
-            if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0){
+            if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0) {
               // on efface la liste de séances globales
               this.listeSeanceFiltree.splice(0);
               // on ajoute les séances uniquement du cinéma
@@ -134,7 +134,7 @@ export class FilmComponent implements OnInit {
                 });
               });
             }
-    
+
           }, (error) => {
             // Error
             console.error('CallObservableComponent error', error);
@@ -162,9 +162,9 @@ export class FilmComponent implements OnInit {
 
     this.subscription$ = this.cinemaObservableService.getCinemaSubject().subscribe(
       (cinemaFiltre: Cinema) => {
-        
+
         // test si un cinéma est sélectionné pour filtrer
-        if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0){       
+        if (cinemaFiltre !== undefined && cinemaFiltre !== null && Object.keys(cinemaFiltre).length !== 0) {
           this.listeSeanceFiltree.filter(seance => seance?.film.id === film.id);
           this.listeSeanceFiltree.forEach(seance => {
             this.listeSeanceFiltreeFilm.push(seance);
@@ -180,9 +180,9 @@ export class FilmComponent implements OnInit {
       }
     );
 
-      // on ne renvoie pas de séance car pas de ciné selectionné
-      return this.listeSeanceFiltreeFilm;
-    
+    // on ne renvoie pas de séance car pas de ciné selectionné
+    return this.listeSeanceFiltreeFilm;
+
   }
 
 }
