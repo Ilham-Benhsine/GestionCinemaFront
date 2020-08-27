@@ -60,12 +60,12 @@
                     <div id="app-parent-seances">
 
 
-                        <div id="app-seances-boutton-cinema">
+                        <div id="app-seances-boutton-cinema" *ngIf="!cinema || !cinema.id">
                             <button mat-raised-button color="primary" (click)="allerPageCinema()">Choisir un cinéma</button>
                         </div>
 
 
-                        <table id="app-seances-table">
+                        <table id="app-seances-table"  *ngIf="cinema && cinema.id">
                             <thead>
                                 <tr>
                                     <th>Vendredi 28/08</th>

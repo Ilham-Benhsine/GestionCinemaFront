@@ -5,7 +5,14 @@
     <div class="margeRight"></div>
     <div class="margeLeft"></div>    
 
-    <input type="text" id="barre-recherche-cinema" class="barre-recherche-cinema" list="listeCinemasAfficher" (input)="filtrerListeCinemas()" placeholder="Rechercher une ville, un cinéma..." [(ngModel)]="filtre">
+    <input  type="text" 
+            id="barre-recherche-cinema"
+            class="barre-recherche-cinema" 
+            list="listeCinemasAfficher" 
+            placeholder="Rechercher une ville, un cinéma..." 
+            [(ngModel)]="filtre"
+            (ngModelChange)="filtrerListeCinemas()">
+
     <datalist id="listeCinemasAfficher">
       <option [value]="cinema.nom" *ngFor="let cinema of listeCinemaFiltree"> {{ cinema.nom }} </option>
     </datalist>

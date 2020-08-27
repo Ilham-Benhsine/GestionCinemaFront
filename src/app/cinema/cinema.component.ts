@@ -26,11 +26,11 @@ export class CinemaComponent implements OnInit {
    */
   filtrerListeCinemas(){
     // réinitialisation de la liste à chaque modification, pour que la liste puisse s'agrandir si l'utilisateur corrige (efface) sa saisie
-    for (let index = 0; index < this.listeCinema.length; index++) {
+    /*for (let index = 0; index < this.listeCinema.length; index++) {
       this.listeCinemaFiltree[index] = this.listeCinema[index];
-    }
+    }*/
     // filtrage
-    this.listeCinemaFiltree = this.listeCinemaFiltree.filter(cinema => cinema.nom.toUpperCase().trim().includes(this.filtre.toUpperCase().trim()));
+    this.listeCinemaFiltree = this.listeCinema.filter(cinema => cinema.nom.toUpperCase().trim().includes(this.filtre.toUpperCase().trim()));
     console.log(this.listeCinemaFiltree);
   }
   
